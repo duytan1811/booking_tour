@@ -1,4 +1,5 @@
 @extends('client.layout._app')
+@section('title', 'Chi tiết bài viết')
 @section('content')
     <div class="breadcumb-wrapper" style="background:url({{ asset('assets/client/images/breadcumb-bg.jpg') }})">
         <div class="container z-index-common">

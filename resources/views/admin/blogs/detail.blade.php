@@ -1,4 +1,5 @@
 @extends('admin.layout._app')
+@section('title', 'Chi tiết bài viết')
 @section('content')
     <div class="text-end mb-3">
         <a href="{!! route('admin.blogs.index') !!}" class="btn btn-danger">Quay lại</a>

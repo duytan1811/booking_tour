@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BookingController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\AuthController as ControllersAuthController;
 use App\Http\Controllers\Client\AccountController;
@@ -69,5 +70,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::resource('bookings', BookingController::class);
         Route::resource('contacts', ContactController::class);
         Route::resource('categories', CategoryController::class);
+
+        Route::get('settings/index', [SettingController::class, 'index'])->name('settings.index');
+        Route::post('settings/save', [SettingController::class, 'save'])->name('settings.save');
     });
 });

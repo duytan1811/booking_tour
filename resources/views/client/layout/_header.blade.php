@@ -41,9 +41,12 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col d-none d-lg-block">
                     <ul class="header-contact">
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:mail@drop.cc">mail@drop.cc</a>
+                        <li><i class="fas fa-envelope"></i> <a
+                                href="mailto:{{ isset($app_settings) ? $app_settings['email'] : 'mail@drop.cc' }}">{{ isset($app_settings) ? $app_settings['email'] : 'mail@drop.cc' }}</a>
                         </li>
-                        <li><i class="fas fa-phone-alt"></i> <a href="tel:02073885619">020 7388 5619</a></li>
+                        <li><i class="fas fa-phone-alt"></i> <a
+                                href="tel:{{ isset($app_settings) ? $app_settings['phone'] : '' }}">{{ isset($app_settings) ? $app_settings['phone'] : '0854334564' }}</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-auto">

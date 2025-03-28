@@ -92,14 +92,6 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        // Bảng Configs
-        Schema::create('configs', function (Blueprint $table) {
-            $table->id();
-            $table->string('key')->comment('Address | Phone | Webname');
-            $table->string('value');
-            $table->timestamps();
-        });
-
         // Bảng TourBookings
         Schema::create('tour_bookings', function (Blueprint $table) {
             $table->id();
@@ -123,19 +115,28 @@ return new class extends Migration
             $table->decimal('price', 10, 2);
             $table->timestamps();
         });
+
+        Schema::create('settings', function (Blueprint $table) {
+            $table->id();
+            $table->string('key');
+            $table->string('value');
+            $table->string('field')->nullable();
+            $table->string('desc')->nullable();
+            $table->string('type');
+            $table->timestamps();
+        });
     }
 
     public function down()
     {
         Schema::dropIfExists('tour_booking_details');
         Schema::dropIfExists('tour_bookings');
-        Schema::dropIfExists('configs');
         Schema::dropIfExists('contacts');
         Schema::dropIfExists('comments');
         Schema::dropIfExists('blogs');
         Schema::dropIfExists('categories');
-        Schema::dropIfExists('tour_services');
         Schema::dropIfExists('tours');
         Schema::dropIfExists('users');
+        Schema::dropIfExists('settings');
     }
 };

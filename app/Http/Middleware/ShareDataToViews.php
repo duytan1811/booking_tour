@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Setting;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +19,11 @@ class ShareDataToViews
     public function handle(Request $request, Closure $next): Response
     {
         View::share('current_user', Auth::user());
+        $app_setting_data = Setting::query()->select('key', 'value')->get()->toArray();
+        $app_settings = array_column($app_setting_data, 'value', 'key');
+        if ($app_settings) {
+            View::share('app_settings', $app_settings);
+        }
         return $next($request);
     }
 }

@@ -4,14 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Tour Booking</title>
-    <meta name="author" content="vecuro">
-    <meta name="description" content="Travolo -  Travel Agency & Tour Booking HTML Template">
-    <meta name="keywords" content="Travolo -  Travel Agency & Tour Booking HTML Template">
-    <meta name="robots" content="INDEX,FOLLOW">
-
+    <title>@yield('title') - {{ isset($app_settings) ? $app_settings['app_name'] : 'Booking tour' }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="icon" type="image/png" href="assets/client/img/favicons/favicon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">

@@ -1,4 +1,5 @@
 @extends('admin.layout._layout_empty')
+@section('title', 'Đăng nhập')
 @section('content')
     <div class="bg-gd-dusk">
         <div class="hero-static content content-full bg-body-extra-light">

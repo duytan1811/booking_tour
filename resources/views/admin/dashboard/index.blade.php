@@ -1,4 +1,5 @@
 @extends('admin.layout._app')
+@section('title', 'Tổng quan')
 @section('content')
     <div class="row">
         <div class="col-6 col-xl-4">

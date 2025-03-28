@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Contact;
+use App\Models\Setting;
 use App\Models\Tour;
 use Illuminate\Http\Request;
 
@@ -24,6 +25,7 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('client.about.index');
+        $blogs = Blog::query()->where('type', 2)->orderBy('created_at','desc')->take(4)->get();
+        return view('client.about.index',compact('blogs'));
     }
 }

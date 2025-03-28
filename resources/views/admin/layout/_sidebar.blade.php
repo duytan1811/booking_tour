@@ -84,7 +84,7 @@
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_widgets_tiles.html">
+                                <a class="nav-main-link" href="{!! route('admin.settings.index') !!}">
                                     <span class="nav-main-link-name">Thông tin website</span>
                                 </a>
                             </li>

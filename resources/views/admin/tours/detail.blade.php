@@ -1,4 +1,5 @@
 @extends('admin.layout._app')
+@section('title', 'Chi tiết tour du lịch')
 @section('content')
     <div class="text-end mb-3">
         <a href="{!! route('admin.tours.index') !!}" class="btn btn-danger">Quay lại</a>

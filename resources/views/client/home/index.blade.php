@@ -1,4 +1,5 @@
 @extends('client.layout._app')
+@section('title', 'Trang chủ')
 @section('content')
     <section class="hero-layout" data-bg-src="assets/client/img/banner/banner-bg-1.png">
         <div class="hero-mask">

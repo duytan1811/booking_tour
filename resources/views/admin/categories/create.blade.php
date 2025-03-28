@@ -1,4 +1,5 @@
 @extends('admin.layout._app')
+@section('title', 'Thêm mới danh mục')
 @section('content')
     <div class="block block-rounded">
         <div class="block-header block-header-default">

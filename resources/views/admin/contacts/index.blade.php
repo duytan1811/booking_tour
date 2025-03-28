@@ -1,4 +1,5 @@
 @extends('admin.layout._app')
+@section('title', 'Danh sách liên hệ')
 @section('content')
     <div class="block block-rounded">
         <div class="block-header block-header-default">

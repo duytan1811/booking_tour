@@ -1,4 +1,5 @@
 @extends('client.layout._app')
+@section('title', 'Liên hệ')
 @section('content')
     <div class="breadcumb-wrapper" style="background:url({{ asset('assets/client/images/breadcumb-bg.jpg') }})">
         <div class="container z-index-common">
@@ -25,8 +26,7 @@
                             </div>
                             <h3 class="contact-box__title h5">Địa chỉ</h3>
                             <p class="contact-box__text">
-                                Cao Lỗ, Quận 8<br>
-                                TP: Hồ Chí Minh
+                                {{ isset($app_settings) ? $app_settings['address'] : 'Quận 8, Hồ Chí Minh' }}
                             </p>
                         </div>
                     </div>
@@ -37,8 +37,8 @@
                             </div>
                             <h3 class="contact-box__title h5">Liên hệ</h3>
                             <ul class="contact-box_list">
-                                <li>Số điện thoại: <a href="#123456789">123456789</a></li>
-                                <li>Hotline: <a href="#123456789">123456789</a></li>
+                                <li>Số điện thoại: <a href="#123456789">{{ isset($app_settings) ? $app_settings['phone'] : '0854334564' }}</a></li>
+                                <li>Hotline: <a href="#123456789">{{ isset($app_settings) ? $app_settings['phone'] : '0854335322' }}</a></li>
                             </ul>
                         </div>
                     </div>

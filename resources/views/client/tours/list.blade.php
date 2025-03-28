@@ -1,4 +1,5 @@
 @extends('client.layout._app')
+@section('title', 'Danh sách tour')
 @section('content')
     <div class="breadcumb-wrapper" style="background:url({{ asset('assets/client/images/breadcumb-bg.jpg') }})">
         <div class="container z-index-common">
@@ -27,17 +28,17 @@
                                         <div class="col-xl-4 col-lg-6 col-sm-6 filter-item hightTolow">
                                             <div class="package-style1">
                                                 <div class="package-img">
-                                                    <a href="tour-booking.html"><img
+                                                    <a href="{!! route('tours.show', $tour->id) !!}"><img
                                                             src="{{ asset('storage/' . $tour->image) }}"
                                                             alt="Package Image"></a>
                                                 </div>
                                                 <div class="package-content">
                                                     <h3 class="package-title"><a
-                                                            href="tour-booking.html">{{ $tour->name }}</a></h3>
+                                                            href="{!! route('tours.show', $tour->id) !!}">{{ $tour->name }}</a></h3>
                                                     <p class="package-text">{{ $tour->destination }}</p>
                                                     <div class="package-meta">
                                                         <a href="#"><i class="fas fa-calendar-alt"></i> Ngày:
-                                                            {{ $tour->tour_days }}</a>
+                                                            {{ $tour->tour_days }}</a><br>
                                                         <a href="#"><i class="fas fa-user"></i> Số người:
                                                             {{ $tour->people }}</a>
                                                     </div>
